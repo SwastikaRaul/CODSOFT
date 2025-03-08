@@ -14,6 +14,22 @@ public class NumberGuessingGame { public static void main(String[] args) {
         int attempts = 0;
         int maxAttempts = 7;
         boolean guessedCorrectly = false;
+        
+        System.out.println("\nA new number has been generated between 1 and 100.");
+        System.out.println("You have " + maxAttempts + " attempts to guess the number.");
+
+        while (attempts < maxAttempts) {
+            System.out.print("Enter your guess: ");
+            int userGuess;
+
+            // Validate user input
+            if (scanner.hasNextInt()) {
+                userGuess = scanner.nextInt();
+            } else {
+                System.out.println("Invalid input! Please enter a number.");
+                scanner.next(); // Clear invalid input
+                continue;
+            }
     }
 }
 
